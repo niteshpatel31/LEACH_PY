@@ -32,12 +32,16 @@ Shortcomings of LEACH include:
 - Remaining energy among the nodes isn't considered when selecting Cluster Heads
 - Random and variable size cluster formations
 - Random and uneven distribution of cluster heads
-- Single hop communication in situations where energy use is less efficient from cluster head to base station
+- Single-hop communication in situations where energy use is less efficient from cluster head to base station
 
 # Run Code
 ### Clone this repository 
 ```bash 
-git clone https://github.com/niteshpatel31/LEACH_PY.git 
+git clone https://github.com/niteshpatel31/LEACH_PY.git leach
+```
+### Change directory to leach
+```bash
+cd leach
 ```
 ### Create Python Virtual Environment (venv)
 ```bash
@@ -57,10 +61,11 @@ python leach.py
 ```
 
 # Video Guide
+https://github.com/niteshpatel31/LEACH_PY/assets/150846500/ecc3ecab-e0da-45fb-b95c-1201c8cbfa1b
 
 ---
 
-This code was originally written by Hritwik Singhal and Nishita Agarwal and was based on Matlab code of Amin-nazari.
+This code was originally written by Hritwik Singhal and Nishita Agarwal and was based on the Matlab code of Amin-Nazari.
 
 ---
 
