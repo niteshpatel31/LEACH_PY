@@ -2,9 +2,10 @@ import pprint
 from math import *
 import matplotlib
 
+# import matplotlib.pyplot as plt
+
 
 matplotlib.use('TkAgg')
-import matplotlib.pyplot as plt
 
 # todo : importing module
 from module import LEACH_create_basics
@@ -14,19 +15,19 @@ from module import find_sender
 from module import join_to_nearest_ch
 from module import reset_sensors
 from module import send_receive_packets
-from module import LEACH_plotter
-
-# this is a comment
-# #################################################
-# todo :test, for debugging
 
 
+# from module import LEACH_plotter
+
+# todo : test, for debugging
+
+# var_pp function
 def var_pp(stuff):
-    pass
+    # pass
     # Todo: UNCOMMENT
-    prettty_prrint = pprint.PrettyPrinter(indent=1)
+    pretty_print = pprint.PrettyPrinter(indent=1)
     for x in stuff:
-        prettty_prrint.pprint(vars(x))
+        pretty_print.pprint(vars(x))
 
 
 def pp(stuff):
@@ -46,7 +47,7 @@ def zeros(row, column):
             re_list.extend(temp_list)
         else:
             re_list.append(temp_list)
-
+    print(re_list)
     return re_list
 
 
@@ -59,7 +60,7 @@ class LEACHSimulation:
         # ############# For set_init_param_for_nodes #############
         # ########################################################
         self.dead_num = 0  # Number of dead nodes
-        self.no_of_ch = 0  # counter for CHs
+        self.no_of_ch = 0  # counter for CHs (Channels)
         self.flag_first_dead = 0  # flag_first_dead
         self.initEnergy = 0  # Initial Energy
 
@@ -460,7 +461,7 @@ class LEACHSimulation:
         print("####################################################################################################")
 
         for sender in self.Sensors:
-            # if the node has sink as its CH but it's not sink itself and the node is not dead
+            # if the node has sink as its CH, but it's not sink itself and the node is not dead
             if sender.MCH == self.n and sender.id != self.n and sender.E > 0:
                 self.receivers = [self.n]  # Sink
                 sender = [sender.id]
