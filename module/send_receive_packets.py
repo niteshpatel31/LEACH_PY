@@ -1,4 +1,4 @@
-from src.LEACH_create_basics import *
+from module.LEACH_create_basics import *
 
 
 def send_rec(sensors: list[Sensor], sender, sap):

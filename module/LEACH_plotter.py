@@ -1,6 +1,6 @@
 import matplotlib
 
-from src.LEACH_create_basics import *
+from module.LEACH_create_basics import *
 
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt

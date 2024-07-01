@@ -6,23 +6,25 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
-# from ..src import LEACH_create_basics
-# from src import LEACH_select_ch
-# from src import findReceiver
-# from src import find_sender
-# from src import join_to_nearest_ch
-# from src import reset_sensors
-# from src import send_receive_packets
-# from src import LEACH_plotter
-import src.LEACH_create_basics 
-import src.LEACH_select_ch
-import src.findReceiver
-import src.find_sender
-import src.join_to_nearest_ch
-import src.reset_sensors
-import src.reset_sensors
-import src.send_receive_packets
-import src.LEACH_plotter
+from module import LEACH_create_basics
+from module import LEACH_select_ch
+from module import findReceiver
+from module import find_sender
+from module import join_to_nearest_ch
+from module import reset_sensors
+from module import send_receive_packets
+from module import LEACH_plotter
+
+# todo : importing module
+# import src.LEACH_create_basics 
+# import src.LEACH_select_ch
+# import src.findReceiver
+# import src.find_sender
+# import src.join_to_nearest_ch
+# import src.reset_sensors
+# import src.reset_sensors
+# import src.send_receive_packets
+# import src.LEACH_plotter
 
 
 # this is a comment

@@ -1,6 +1,6 @@
 from math import inf
 
-from src.LEACH_create_basics import *
+from module.LEACH_create_basics import *
 
 
 def start(Sensors: list[Sensor], my_model: Model, round_number):

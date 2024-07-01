@@ -1,4 +1,4 @@
-from src import LEACH
+from . import LEACH
 
 
 def main():
