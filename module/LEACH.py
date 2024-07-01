@@ -6,6 +6,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
+# todo : importing module
 from module import LEACH_create_basics
 from module import LEACH_select_ch
 from module import findReceiver
@@ -14,18 +15,6 @@ from module import join_to_nearest_ch
 from module import reset_sensors
 from module import send_receive_packets
 from module import LEACH_plotter
-
-# todo : importing module
-# import src.LEACH_create_basics 
-# import src.LEACH_select_ch
-# import src.findReceiver
-# import src.find_sender
-# import src.join_to_nearest_ch
-# import src.reset_sensors
-# import src.reset_sensors
-# import src.send_receive_packets
-# import src.LEACH_plotter
-
 
 # this is a comment
 # #################################################
@@ -63,7 +52,7 @@ def zeros(row, column):
 
 class LEACHSimulation:
 
-    def __init__(self, n=200):
+    def __init__(self, n=20):
         self.n = n  # Number of Nodes in the field
 
         # ########################################################

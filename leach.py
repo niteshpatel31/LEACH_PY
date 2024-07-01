@@ -1,8 +1,8 @@
-from . import LEACH
+from module import LEACH
 
 
 def main():
-    myLeach = LEACH.LEACHSimulation(n=5)
+    myLeach = LEACH.LEACHSimulation(1)
     myLeach.start()
 
 
