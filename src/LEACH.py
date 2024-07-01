@@ -2,17 +2,28 @@ import pprint
 from math import *
 import matplotlib
 
+
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
-from src import LEACH_create_basics
-from src import LEACH_select_ch
-from src import findReceiver
-from src import find_sender
-from src import join_to_nearest_ch
-from src import reset_sensors
-from src import send_receive_packets
-from src import LEACH_plotter
+# from ..src import LEACH_create_basics
+# from src import LEACH_select_ch
+# from src import findReceiver
+# from src import find_sender
+# from src import join_to_nearest_ch
+# from src import reset_sensors
+# from src import send_receive_packets
+# from src import LEACH_plotter
+import src.LEACH_create_basics 
+import src.LEACH_select_ch
+import src.findReceiver
+import src.find_sender
+import src.join_to_nearest_ch
+import src.reset_sensors
+import src.reset_sensors
+import src.send_receive_packets
+import src.LEACH_plotter
+
 
 # this is a comment
 # #################################################
@@ -22,16 +33,16 @@ from src import LEACH_plotter
 def var_pp(stuff):
     pass
     # Todo: UNCOMMENT
-    # prettty_prrint = pprint.PrettyPrinter(indent=1)
-    # for x in stuff:
-    #     prettty_prrint.pprint(vars(x))
+    prettty_prrint = pprint.PrettyPrinter(indent=1)
+    for x in stuff:
+        prettty_prrint.pprint(vars(x))
 
 
 def pp(stuff):
     print(stuff)
     # Todo: UNCOMMENT
-    # prettty_prrint = pprint.PrettyPrinter(indent=4)
-    # prettty_prrint.pprint(stuff)
+    prettty_prrint = pprint.PrettyPrinter(indent=4)
+    prettty_prrint.pprint(stuff)
 
 
 # #################################################
