@@ -2,7 +2,7 @@ from module import LEACH
 
 
 def main():
-    leach = LEACH.LEACHSimulation(4)
+    leach = LEACH.LEACHSimulation(5)
     leach.start()
 
 

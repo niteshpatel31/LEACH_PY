@@ -21,8 +21,8 @@ from module import send_receive_packets
 
 # todo : test, for debugging
 
-# var_pp function
-def var_pp(stuff):
+
+def var_pp(stuff): # print pretty using PrettyPrinter for tuple of dicts
     # pass
     # Todo: UNCOMMENT
     pretty_print = pprint.PrettyPrinter(indent=1)
@@ -30,7 +30,7 @@ def var_pp(stuff):
         pretty_print.pprint(vars(x))
 
 
-def pp(stuff):
+def pp(stuff): # print pretty using PrettyPrinter for list objects
     print(stuff)
     # Todo: UNCOMMENT
     prettty_prrint = pprint.PrettyPrinter(indent=4)
@@ -39,21 +39,21 @@ def pp(stuff):
 
 # #################################################
 
-def zeros(row, column):
+def zeros(row, column): # todo : what does this function do
     re_list = []
     for x in range(row):
         temp_list = [0 for _ in range(column)]
         if row == 1:
-            re_list.extend(temp_list)
+            re_list.extend(temp_list) # same as re_list += temp_list
         else:
-            re_list.append(temp_list)
-    print(re_list)
+            re_list.append(temp_list) #
+        print("templist : ", temp_list)
+        print("re_list : " , re_list)
     return re_list
 
 
 class LEACHSimulation:
-
-    def __init__(self, n=20):
+    def __init__(self, n=200): #
         self.n = n  # Number of Nodes in the field
 
         # ########################################################
@@ -67,6 +67,7 @@ class LEACHSimulation:
         # Create sensor nodes, Set Parameters and Create Energy Model
         self.my_model = LEACH_create_basics.Model(self.n)  # Set Parameters self.Sensors and Network
 
+        # todo : Is this this the maximum no of packets and routing packets send & received
         # Below will be of length(Max_rounds) so each element will store the total packets in each round
         # the length is rmax + 1 since we take one initialization round also.
         self.SRP = zeros(1, self.my_model.rmax + 1)  # number of sent routing packets
@@ -254,7 +255,8 @@ class LEACHSimulation:
         print("self.rrp", self.rrp)
         print("self.sdp", self.sdp)
         print("self.rdp", self.rdp)
-        print("Sensors: \n", var_pp(self.Sensors))
+        # print("Sensors: \n")
+        # var_pp(self.Sensors)
 
         # Save metrics, Round 0 is initialization phase where all nodes send routing packets (hello) to Sink as above
         self.SRP[0] = self.srp
@@ -291,8 +293,8 @@ class LEACHSimulation:
             self.srp, self.rrp, self.sdp, self.rdp = reset_sensors.start(self.Sensors, self.my_model, round_number)
 
             # todo: test
-            print("Sensors: ", )
-            var_pp(self.Sensors)
+            # print("Sensors: ",)
+            # var_pp(self.Sensors)
 
             # ########################################
             # ############# plot Sensors #############
@@ -360,7 +362,7 @@ class LEACHSimulation:
         # todo: test
         print("CH: ", self.list_CH)
         print("\nSensors:")
-        var_pp(self.Sensors)
+        # var_pp(self.Sensors)
         print()
 
         # ########################################
@@ -407,7 +409,7 @@ class LEACHSimulation:
             print("self.sdp", self.sdp)
             print("self.rdp", self.rdp)
             print("Sensors: ", )
-            var_pp(self.Sensors)
+            # var_pp(self.Sensors)
             print()
 
     def __steady_state_phase(self):
@@ -563,6 +565,6 @@ class LEACHSimulation:
         print('self.consumed_energy', self.consumed_energy)
         print('self.Enheraf', self.Enheraf)
 
-        print("Sensors: ", )
-        var_pp(self.Sensors)
+        # print("Sensors: ", )
+        # var_pp(self.Sensors)
         print('----------------------------------------------')

@@ -39,7 +39,7 @@ class Model:
 
         # %%%%%%%%%%%%%%%%%%%%%%%%% Run Time Parameters %%%%%%%%%%%%%%%%%%%%%%%%%
         # maximum number of rounds
-        self.rmax = 200
+        self.rmax = 19
 
         # Data packet size
         self.data_packet_len = 4000
